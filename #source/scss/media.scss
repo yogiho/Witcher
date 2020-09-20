@@ -1,0 +1,136 @@
+@media (max-width: 992px) {
+    .mobile-none {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {
+
+    .header {
+        position: relative; 
+
+        .container {
+            padding: 0;
+        }
+    
+        &__nav {
+            width: 220px;
+            position: fixed;
+            top: 0;
+            right: -220px;
+            z-index: 1;
+            padding: 0;
+            transition: all .8s ease;
+        }
+    }
+
+        .active {
+            right: 0;
+        }
+
+    .burger-menu {
+        width: 35px;
+        height: 30px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .line-1, .line-2, .line-3 {
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        transition: all .8s ease;
+    }
+
+     .active .line-1{
+        transform: translateY(15px) rotateZ(45deg) ;
+    }
+
+     .active .line-2{
+        opacity: 0;
+    }
+
+     .active .line-3{
+        transform: translateY(-12px) rotateZ(-45deg) ;
+    }
+
+    .nav__menu {
+        background: #9d2929;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5em;
+
+        .logo.mobile {
+            margin: 0;
+            margin-bottom: 1em;
+        }
+
+        &-list {
+            flex-direction: column;
+            margin-bottom: 1em;
+
+            &_link {
+                line-height: 2.5em;
+            }
+        }
+    }
+
+
+    .main {
+
+        &__title {
+            font-size: 55px;
+        }
+
+        &__content {
+            margin-bottom: 2em;
+        }
+
+        &__series-wrapper_card-info {
+
+            p {
+                font-size: 12px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }
+
+
+
+    .footer {
+        position: fixed;
+        padding: 15px;
+
+        .copyright {
+            width: 100%;
+            font-size: 10px;
+        }
+
+        &__nav {
+            flex-direction: column;
+            align-items: start;
+
+
+
+            &-list {
+                justify-content: flex-end;
+                padding: 0;
+            }
+
+            &_link {
+                font-size: 10px;
+                margin: 0 1.5em 0 0;
+            }
+        }
+    }
+}
